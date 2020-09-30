@@ -20,6 +20,12 @@
     },
     "require": {
         "php": "^7.4|^8.0",
+        "httpsoft/http-emitter": "^1.0",
+        "httpsoft/http-error-handler": "^1.0",
+        "httpsoft/http-response": "^1.0",
+        "httpsoft/http-router": "^1.0",
+        "httpsoft/http-runner": "^1.0",
+        "httpsoft/http-server-request": "^1.0",
         "psr/container": "^1.0",
         "psr/http-factory": "^1.0",
         "psr/http-message": "^1.0",
