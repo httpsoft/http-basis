@@ -1,6 +1,6 @@
 {
     "name": "httpsoft/http-basis",
-    "description": "Simple and fast HTTP micro framework implementing PSR standards",
+    "description": "Simple and fast HTTP microframework implementing PSR standards",
     "keywords": ["php", "http", "psr-7", "psr-11", "psr-15", "http-framework", "microframework"],
     "homepage": "https://httpsoft.org/",
     "type": "library",
