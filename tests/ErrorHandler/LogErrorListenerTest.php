@@ -25,10 +25,10 @@ class LogErrorListenerTest extends TestCase
         );
         $listener->trigger($exception, $request);
 
-        $wrapper = new TraitMethodsWrapper();
+        $traits = new TraitMethodsWrapper();
         $context = [
-            'exception' => $wrapper->extractExceptionData($exception),
-            'request' => $wrapper->extractRequestData($request),
+            'exception' => $traits->extractExceptionData($exception),
+            'request' => $traits->extractRequestData($request),
         ];
 
         $this->assertSame($message, $logger->message);
