@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace HttpSoft\Tests\Basis\Middleware;
 
+use HttpSoft\Basis\Exception\BadRequestHttpException;
 use HttpSoft\Basis\Middleware\BodyParamsMiddleware;
 use HttpSoft\Message\Response;
 use HttpSoft\Message\ServerRequest;
-use JsonException;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -101,7 +101,7 @@ class BodyParamsMiddlewareTest extends TestCase
      * @param string $contentType
      * @param string $requestBody
      * @param string $expectedBody
-     * @throws JsonException
+     * @throws BadRequestHttpException
      */
     public function testProcessWithMatchData(string $contentType, string $requestBody, string $expectedBody)
     {
@@ -156,7 +156,7 @@ class BodyParamsMiddlewareTest extends TestCase
      * @dataProvider mismatchDataProvider
      * @param string $contentType
      * @param string $requestBody
-     * @throws JsonException
+     * @throws BadRequestHttpException
      */
     public function testProcessWithMismatchData(string $contentType, string $requestBody)
     {
@@ -166,11 +166,11 @@ class BodyParamsMiddlewareTest extends TestCase
         $this->assertSame('', (string) $response->getBody());
     }
 
-    public function testProcessThrowJsonExceptionForInvalidJsonBody(): void
+    public function testProcessThrowBadRequestHttpExceptionForInvalidJsonBody(): void
     {
         $request = $this->createServerRequest('POST', 'application/json');
         $request->getBody()->write('{"name"}/value');
-        $this->expectException(JsonException::class);
+        $this->expectException(BadRequestHttpException::class);
         $this->middleware->process($request, $this->createRequestHandler());
     }
 
