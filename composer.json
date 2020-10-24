@@ -36,6 +36,7 @@
         "psr/log": "^1.1"
     },
     "require-dev": {
+        "devanych/di-container": "^2.1",
         "devanych/view-renderer": "^1.0",
         "phpunit/phpunit": "^9.3",
         "squizlabs/php_codesniffer": "^3.5",
