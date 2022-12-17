@@ -20,6 +20,7 @@
     },
     "require": {
         "php": "^7.4|^8.0",
+        "ext-json": "*",
         "httpsoft/http-cookie": "^1.0",
         "httpsoft/http-emitter": "^1.0",
         "httpsoft/http-error-handler": "^1.0",
