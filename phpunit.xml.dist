@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
-         bootstrap="vendor/autoload.php"
-         executionOrder="depends,defects"
-         beStrictAboutCoversAnnotation="true"
-         beStrictAboutOutputDuringTests="true"
-         beStrictAboutTodoAnnotatedTests="true"
-         failOnRisky="true"
-         failOnWarning="true"
-         verbose="true"
-         colors="true">
+<phpunit
+     bootstrap="vendor/autoload.php"
+     executionOrder="random"
+     beStrictAboutCoversAnnotation="true"
+     beStrictAboutOutputDuringTests="true"
+     beStrictAboutTodoAnnotatedTests="true"
+     convertWarningsToExceptions="true"
+     convertNoticesToExceptions="true"
+     convertErrorsToExceptions="true"
+     resolveDependencies="true"
+     stopOnFailure="false"
+     failOnWarning="true"
+     failOnRisky="true"
+     verbose="true"
+     colors="true"
+>
+    <php>
+        <ini name="error_reporting" value="-1"/>
+    </php>
+
     <testsuites>
         <testsuite name="HttpSoft Basis Test Suite">
             <directory>tests</directory>

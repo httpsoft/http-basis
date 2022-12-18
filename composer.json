@@ -34,7 +34,7 @@
         "psr/http-message": "^1.0",
         "psr/http-server-handler": "^1.0",
         "psr/http-server-middleware": "^1.0",
-        "psr/log": "^1.1 || ^2.0 || ^3.0"
+        "psr/log": "^1.1|^2.0|^3.0"
     },
     "require-dev": {
         "devanych/di-container": "^2.1",
@@ -56,6 +56,12 @@
     "autoload-dev": {
         "psr-4": {
             "HttpSoft\\Tests\\Basis\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
         }
     },
     "scripts": {
