@@ -53,7 +53,7 @@ class PrepareJsonDataTraitTest extends TestCase
         $this->assertSame(
             ['a' => 1, 'b' => 'string'],
             $this->prepareJsonData(new class () implements JsonSerializable {
-                public function jsonSerialize()
+                public function jsonSerialize(): array
                 {
                     return ['a' => 1, 'b' => 'string'];
                 }
