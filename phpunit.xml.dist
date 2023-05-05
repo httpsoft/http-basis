@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
-     bootstrap="vendor/autoload.php"
-     executionOrder="random"
-     beStrictAboutCoversAnnotation="true"
-     beStrictAboutOutputDuringTests="true"
-     beStrictAboutTodoAnnotatedTests="true"
-     convertWarningsToExceptions="true"
-     convertNoticesToExceptions="true"
-     convertErrorsToExceptions="true"
-     resolveDependencies="true"
-     stopOnFailure="false"
-     failOnWarning="true"
-     failOnRisky="true"
-     verbose="true"
-     colors="true"
+    bootstrap="vendor/autoload.php"
+    executionOrder="random"
+    beStrictAboutCoversAnnotation="true"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutTodoAnnotatedTests="true"
+    convertWarningsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertErrorsToExceptions="true"
+    resolveDependencies="true"
+    stopOnFailure="false"
+    failOnWarning="true"
+    failOnRisky="true"
+    verbose="true"
+    colors="true"
 >
     <php>
         <ini name="error_reporting" value="-1"/>
@@ -21,13 +21,13 @@
 
     <testsuites>
         <testsuite name="HttpSoft Basis Test Suite">
-            <directory>tests</directory>
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
 
     <coverage processUncoveredFiles="true">
         <include>
-            <directory suffix=".php">src</directory>
+            <directory suffix=".php">./src</directory>
         </include>
     </coverage>
 </phpunit>
