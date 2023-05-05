@@ -1,5 +1,11 @@
 # HTTP Basis Change Log
 
+## 1.1.0 - 2023.05.05
+
+### Changed
+
+- [#3](https://github.com/httpsoft/http-basis/pull/3) Rises `httpsoft/http-message` package version to `^1.1`.
+
 ## 1.0.2 - 2022.12.18
 
 ### Added
