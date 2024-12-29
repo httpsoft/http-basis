@@ -13,7 +13,7 @@ class UnauthorizedHttpException extends HttpException
      * @param string|null $reasonPhrase
      * @param Throwable|null $previous
      */
-    public function __construct(string $reasonPhrase = null, Throwable $previous = null)
+    public function __construct(?string $reasonPhrase = null, ?Throwable $previous = null)
     {
         parent::__construct(ErrorResponseGeneratorInterface::STATUS_UNAUTHORIZED, $reasonPhrase, $previous);
     }
