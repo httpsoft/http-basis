@@ -25,7 +25,7 @@ class HttpException extends Exception
      * @param string|null $reasonPhrase
      * @param Throwable|null $previous
      */
-    public function __construct(int $statusCode, string $reasonPhrase = null, Throwable $previous = null)
+    public function __construct(int $statusCode, ?string $reasonPhrase = null, ?Throwable $previous = null)
     {
         $reasonPhrase ??= '';
 

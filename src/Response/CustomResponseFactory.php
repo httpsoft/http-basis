@@ -31,7 +31,7 @@ final class CustomResponseFactory implements ResponseFactoryInterface
      * @param StreamInterface|string|resource $body
      * @param string $protocol
      */
-    public function __construct(array $headers = null, $body = 'php://temp', string $protocol = '1.1')
+    public function __construct(?array $headers = null, $body = 'php://temp', string $protocol = '1.1')
     {
         $this->headers = $headers ?? ['Content-Type' => 'text/html; charset=UTF-8'];
         $this->body = $body;

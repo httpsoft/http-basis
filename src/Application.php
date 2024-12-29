@@ -52,7 +52,7 @@ final class Application
         EmitterInterface $emitter,
         MiddlewarePipelineInterface $pipeline,
         MiddlewareResolverInterface $resolver,
-        RequestHandlerInterface $default = null
+        ?RequestHandlerInterface $default = null
     ) {
         $this->router = $router;
         $this->emitter = $emitter;
