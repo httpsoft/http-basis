@@ -27,8 +27,7 @@ final class BodyParamsMiddleware implements MiddlewareInterface
      *
      * @throws BadRequestHttpException
      * @link https://tools.ietf.org/html/rfc7231
-     * @psalm-suppress MixedArgument
-     * @psalm-suppress MixedAssignment
+     * @psalm-suppress MixedArgument, MixedAssignment, RiskyTruthyFalsyComparison
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
