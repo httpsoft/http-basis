@@ -69,7 +69,7 @@ final class Application
      * @param ServerRequestInterface $request
      * @param RequestHandlerInterface|null $defaultHandler
      */
-    public function run(ServerRequestInterface $request, RequestHandlerInterface $defaultHandler = null): void
+    public function run(ServerRequestInterface $request, ?RequestHandlerInterface $defaultHandler = null): void
     {
         (new ServerRequestRunner($this->pipeline, $this->emitter))->run($request, $defaultHandler ?? $this->default);
     }
@@ -82,7 +82,7 @@ final class Application
      * @param mixed $middleware any valid value for converting it to `Psr\Http\Server\MiddlewareInterface` instance.
      * @param string|null $path path prefix from the root to which the middleware is attached.
      */
-    public function pipe($middleware, string $path = null): void
+    public function pipe($middleware, ?string $path = null): void
     {
         $this->pipeline->pipe($this->resolver->resolve($middleware), $path);
     }
