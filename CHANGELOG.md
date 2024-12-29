@@ -1,5 +1,11 @@
 # HTTP Basis Change Log
 
+## 1.1.1 - 2024.12.30
+
+### Fixed
+
+- [#5](https://github.com/httpsoft/http-basis/pull/5) Fixes compatibility for PHP 8.4`.
+
 ## 1.1.0 - 2023.05.05
 
 ### Changed
